@@ -1,8 +1,18 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 
 let styles = StyleSheet.create({
   title: {
-    fontSize: 20,
+    fontSize: 40,
+    color: "#2E7D32"
+  },
+  button: {
+    borderRadius: 10,
+    height: 50,
+    width: "50%",
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10,
   }
 })
 
@@ -11,11 +21,14 @@ export default function Index() {
     <View
       style={{
         flex: 1,
-        justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "#F3FAEF",
       }}
     >
-      <Text style={styles.title}>Nature Quest</Text>
+      <Image source={require("../assets/images/logo.png")} style={{width: 400, height: 400}} />
+      <TouchableOpacity style={styles.button} onPress={() => {}}> {/*TODO: navigate to login page*/}
+        <Text style={{fontSize: 25, color: "#2E7D32"}}>Start</Text>
+      </TouchableOpacity>
     </View>
   );
 }
