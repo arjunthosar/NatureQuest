@@ -7,6 +7,7 @@ import {
   TextInput,
   Alert,
   TouchableOpacity,
+  Image
 } from "react-native"
 import { Menu, Button, Provider } from "react-native-paper"
 
@@ -122,7 +123,7 @@ const styles = StyleSheet.create({
     padding: 30,
     backgroundColor: "#F3FAEF",
   },
-
+  
   title: {
     fontSize: 28,
     fontWeight: "bold",

@@ -166,6 +166,7 @@ export default function App() {
 
     return (
         <View style={styles.container}>
+            <Image source={require("../assets/images/life.png")} style={{width: "100%", height: "100%", position: "absolute"}}/>
             <Text style={{ color: '#006400', fontSize: 32, fontWeight: 'bold', textAlign: 'center', marginVertical: 20 }}>
               Welcome to Nature Quest!
             </Text>
