@@ -35,7 +35,7 @@ export default function Login() {
   return (
     <Provider>
       <View style={styles.container}>
-        <Text style={styles.title}>🌿 Touch Grass 🌿</Text>
+        <Text style={styles.title}>🌿 Nature Quest 🌿</Text>
 
         <TextInput
           style={styles.input}
