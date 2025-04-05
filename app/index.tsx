@@ -1,6 +1,20 @@
-import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import { router } from "expo-router";
+import { StyleSheet, Text, TouchableOpacity, View, Image, ImageBackground } from "react-native";
 
 let styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  background: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute"
+  },
   title: {
     fontSize: 40,
     color: "#2E7D32"
@@ -13,22 +27,26 @@ let styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 10,
+  },
+  logo: {
+    width: 400,
+    height: 400,
+    resizeMode: "contain",
+  },
+  buttonText: {
+    fontSize: 25,
+    color: "#2E7D32",
   }
-})
+});
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        backgroundColor: "#F3FAEF",
-      }}
-    >
-      <Image source={require("../assets/images/logo.png")} style={{width: 400, height: 400}} />
-      <TouchableOpacity style={styles.button} onPress={() => {}}> {/*TODO: navigate to login page*/}
-        <Text style={{fontSize: 25, color: "#2E7D32"}}>Start</Text>
-      </TouchableOpacity>
-    </View>
+      <View style={styles.container}>
+        <Image source={require("../assets/images/nature.png")} style={styles.background}/>
+        <Image source={require("../assets/images/logo.png")} style={styles.logo} />
+        <TouchableOpacity style={styles.button} onPress={() => router.push("/login")}>
+          <Text style={styles.buttonText}>Start</Text>
+        </TouchableOpacity>
+      </View>
   );
 }
